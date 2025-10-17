@@ -11,9 +11,9 @@ const ConferenceEvent = () => {
   const venueItems = useSelector((state) => state.venue);
   const dispatch = useDispatch();
   const remainingAuditoriumQuantity = 3 - venueItems.find(item => item.name === "Auditorium Hall (Capacity:200)").quantity;
-  // add-ons 
+  
   const addOnsItems = useSelector(state => state.addons);
-  // meals
+  
   const mealsItems = useSelector(state => state.meals);
 
 
@@ -157,8 +157,8 @@ const ConferenceEvent = () => {
 
   const navigateToProducts = (idType) => {
     if (idType == '#venue' || idType == '#addons' || idType == '#meals') {
-      if (showItems) { // Check if showItems is false
-        setShowItems(!showItems); // Toggle showItems to true only if it's currently false
+      if (showItems) { 
+        setShowItems(!showItems); 
       }
     }
   }
